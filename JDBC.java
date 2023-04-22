@@ -11,7 +11,7 @@ public class JDBC {
 	public static void main(String[] args) throws ClassNotFoundException, SQLException {
 
 		Class.forName("oracle.jdbc.driver.OracleDriver");
-		Connection c = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe", "hr", "123456");
+		Connection c = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe", "hr", "password");
 		String s = "select * from employees where salary >= 10000";
 		PreparedStatement prepareStatement = c.prepareStatement(s);
 		ResultSet r = prepareStatement.executeQuery();
